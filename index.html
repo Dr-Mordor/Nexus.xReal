@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus.xReal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell" id="top">
+      <header class="topbar border-panel">
+        <a class="brand" href="#top">Nexus</a>
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="content border-panel">
+          <section class="intro border-panel" id="about">
+            <div>
+              <h1>We build immersive VR, Unity, and web experiences for brands that want to feel unforgettable.</h1>
+              <p>From product launches to interactive storytelling, we design and develop digital worlds that merge performance, motion, and clarity.</p>
+            </div>
+          </section>
+
+          <section class="section-block" id="services">
+            <h2>Services</h2>
+            <p>We create VR-ready experiences, Unity-powered prototypes, and high-converting websites with a cinematic feel.</p>
+          </section>
+
+          <section class="showcase" id="projects" aria-label="Projects">
+            <article class="card border-panel">
+              <h4>VR Experiences</h4>
+              <p>Immersive environments for training, demos, brand activations, and interactive showcases.</p>
+            </article>
+            <article class="card border-panel">
+              <h4>Unity Development</h4>
+              <p>Fast prototypes and polished interactive applications built for realism and scale.</p>
+            </article>
+            <article class="card border-panel">
+              <h4>Web Build</h4>
+              <p>Modern websites that turn complex products into clear, compelling digital journeys.</p>
+            </article>
+          </section>
+
+          <section class="section-block" id="team">
+            <h2>Team</h2>
+            <div class="team-grid">
+              <article class="card border-panel">
+                <h4>john Chen</h4>
+                <p>Creative Director</p>
+              </article>
+              <article class="card border-panel">
+                <h4>Jonas Rivera</h4>
+                <p>Unity Engineer</p>
+              </article>
+              <article class="card border-panel">
+                <h4>Alice Brooks</h4>
+                <p>Experience Designer</p>
+              </article>
+              <article class="card border-panel">
+                <h4>Daniel Sol</h4>
+                <p>Frontend Developer</p>
+              </article>
+              <article class="card border-panel">
+                <h4>Priya Nair</h4>
+                <p>Product Strategist</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-block" id="contact">
+            <h2>Contact</h2>
+            <p>Let’s build the next immersive product experience for your audience.</p>
+            <button class="contact-button" type="button" data-open-modal>Start a project</button>
+          </section>
+
+          <div class="modal-backdrop" id="contactModal" aria-hidden="true">
+            <div class="modal-card border-panel" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+              <div class="modal-header">
+                <h3 id="contactModalTitle">Tell us about your project</h3>
+                <button class="modal-close" type="button" aria-label="Close contact form" data-close-modal>&times;</button>
+              </div>
+              <form class="contact-form">
+                <label>
+                  Phone number
+                  <input type="tel" name="phone" placeholder="+1 555 123 4567" required />
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" placeholder="you@example.com" required />
+                </label>
+                <label>
+                  Project details
+                  <textarea name="project" rows="5" placeholder="Describe the VR, Unity, or web experience you want to build." required></textarea>
+                </label>
+                <button class="contact-submit" type="submit">Send inquiry</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer border-panel">
+        <span>© <span id="year"></span> Nexus Studio</span>
+        <div class="social-links" aria-label="Social media links">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://x.com" target="_blank" rel="noreferrer">X</a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>
