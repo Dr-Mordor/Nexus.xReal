@@ -1,0 +1,56 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+body {
+  font-size: $type-body;
+  line-height: $leading-normal;
+}
+
+h1, h2, h3, h4 {
+  font-weight: $font-weight-bold;
+  letter-spacing: $tracking-tight;
+  line-height: $leading-tight;
+  color: $color-ink;
+}
+
+p {
+  color: $color-graphite;
+}
+
+.eyebrow {
+  display: block;
+  @include tracked-caps;
+  color: $color-slate;
+  margin-bottom: $space-2;
+}
+
+.display {
+  font-size: $type-display;
+  letter-spacing: $tracking-tighter;
+  line-height: $leading-tight;
+}
+
+.lead {
+  font-size: $type-lead;
+  line-height: $leading-snug;
+  color: $color-graphite;
+  font-weight: $font-weight-regular;
+}
+
+.text-serif-accent {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-weight: $font-weight-regular;
+}
+
+.text-muted {
+  color: $color-slate;
+}
+
+.on-dark {
+  color: $color-dark-text;
+
+  p, .lead, .text-muted {
+    color: $color-dark-muted;
+  }
+}

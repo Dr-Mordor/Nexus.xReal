@@ -1,0 +1,67 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.hero {
+  position: relative;
+  min-height: 92svh;
+  display: flex;
+  align-items: center;
+  padding-block: $space-6 $space-5;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(10, 92, 255, 0.06), transparent 70%),
+    $color-canvas;
+}
+
+.hero__inner {
+  max-width: 920px;
+}
+
+.hero__headline {
+  margin-bottom: $space-3;
+}
+
+.hero__lead {
+  max-width: 44ch;
+  margin-bottom: $space-4;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+}
+
+.hero__scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: $space-4;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 34px;
+  border: 1.5px solid $color-hairline-strong;
+  border-radius: $radius-pill;
+
+  span {
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    width: 3px;
+    height: 7px;
+    border-radius: $radius-pill;
+    background: $color-slate;
+    transform: translateX(-50%);
+    animation: hero-scroll-cue 2.2s $ease-fluid infinite;
+  }
+
+  @include respond(small) {
+    display: none;
+  }
+}
+
+@keyframes hero-scroll-cue {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  70% { transform: translate(-50%, 14px); opacity: 0; }
+  71% { transform: translate(-50%, 0); opacity: 0; }
+  100% { transform: translate(-50%, 0); opacity: 1; }
+}

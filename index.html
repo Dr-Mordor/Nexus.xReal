@@ -3,120 +3,232 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nexus.xReal</title>
+    <title>Nexus — Immersive VR, Unity &amp; Web Studio</title>
+    <meta name="description" content="Nexus designs and builds immersive VR experiences, real-time Unity applications, and web products for brands that refuse to be forgettable." />
+    <link rel="icon" href="./assets/imgs/logo.png" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script src="script.js" type="module" defer></script>
   </head>
   <body>
-    <div class="page-shell" id="top">
-      <header class="topbar border-panel">
-        <a class="brand" href="#top">Nexus</a>
-        <nav class="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="nav">
+      <div class="nav__inner container">
+        <a class="nav__brand" href="#top">
+          <span class="nav__mark"><img src="./assets/imgs/logo.png" alt="" /></span>
+          <span class="nav__wordmark">Nexus</span>
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#work">Work</a>
+          <a href="#approach">Approach</a>
           <a href="#team">Team</a>
           <a href="#contact">Contact</a>
         </nav>
-      </header>
 
-      <main>
-        <section class="content border-panel">
-          <section class="intro border-panel" id="about">
-            <div>
-              <h1>We build immersive VR, Unity, and web experiences for brands that want to feel unforgettable.</h1>
-              <p>From product launches to interactive storytelling, we design and develop digital worlds that merge performance, motion, and clarity.</p>
-            </div>
-          </section>
+        <button class="btn btn--ghost nav__cta" type="button" data-open-modal>Start a project</button>
 
-          <section class="section-block" id="services">
-            <h2>Services</h2>
-            <p>We create VR-ready experiences, Unity-powered prototypes, and high-converting websites with a cinematic feel.</p>
-          </section>
+        <button class="nav__toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
 
-          <section class="showcase" id="projects" aria-label="Projects">
-            <article class="card border-panel">
-              <h4>VR Experiences</h4>
-              <p>Immersive environments for training, demos, brand activations, and interactive showcases.</p>
-            </article>
-            <article class="card border-panel">
-              <h4>Unity Development</h4>
-              <p>Fast prototypes and polished interactive applications built for realism and scale.</p>
-            </article>
-            <article class="card border-panel">
-              <h4>Web Build</h4>
-              <p>Modern websites that turn complex products into clear, compelling digital journeys.</p>
-            </article>
-          </section>
+      <div class="nav__mobile" id="navMobile">
+        <a href="#work">Work</a>
+        <a href="#approach">Approach</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+        <button class="btn btn--primary" type="button" data-open-modal>Start a project</button>
+      </div>
+    </header>
 
-          <section class="section-block" id="team">
-            <h2>Team</h2>
-            <div class="team-grid">
-              <article class="card border-panel">
-                <h4>john Chen</h4>
-                <p>Creative Director</p>
-              </article>
-              <article class="card border-panel">
-                <h4>Jonas Rivera</h4>
-                <p>Unity Engineer</p>
-              </article>
-              <article class="card border-panel">
-                <h4>Alice Brooks</h4>
-                <p>Experience Designer</p>
-              </article>
-              <article class="card border-panel">
-                <h4>Daniel Sol</h4>
-                <p>Frontend Developer</p>
-              </article>
-              <article class="card border-panel">
-                <h4>Priya Nair</h4>
-                <p>Product Strategist</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="section-block" id="contact">
-            <h2>Contact</h2>
-            <p>Let’s build the next immersive product experience for your audience.</p>
-            <button class="contact-button" type="button" data-open-modal>Start a project</button>
-          </section>
-
-          <div class="modal-backdrop" id="contactModal" aria-hidden="true">
-            <div class="modal-card border-panel" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
-              <div class="modal-header">
-                <h3 id="contactModalTitle">Tell us about your project</h3>
-                <button class="modal-close" type="button" aria-label="Close contact form" data-close-modal>&times;</button>
-              </div>
-              <form class="contact-form">
-                <label>
-                  Phone number
-                  <input type="tel" name="phone" placeholder="+1 555 123 4567" required />
-                </label>
-                <label>
-                  Email
-                  <input type="email" name="email" placeholder="you@example.com" required />
-                </label>
-                <label>
-                  Project details
-                  <textarea name="project" rows="5" placeholder="Describe the VR, Unity, or web experience you want to build." required></textarea>
-                </label>
-                <button class="contact-submit" type="submit">Send inquiry</button>
-              </form>
-            </div>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero__inner">
+          <p class="eyebrow reveal">Nexus — Immersive Studio</p>
+          <h1 class="display hero__headline reveal">
+            Reality,<br />
+            <span class="text-serif-accent">engineered.</span>
+          </h1>
+          <p class="lead hero__lead reveal">
+            We design and build VR experiences, real-time Unity worlds, and web
+            products for brands that refuse to be forgettable.
+          </p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary" href="#work">View our work</a>
+            <button class="btn btn--ghost" type="button" data-open-modal>Start a project</button>
           </div>
-        </section>
-      </main>
+        </div>
+        <div class="hero__scroll-cue" aria-hidden="true"><span></span></div>
+      </section>
 
-      <footer class="footer border-panel">
-        <span>© <span id="year"></span> Nexus Studio</span>
-        <div class="social-links" aria-label="Social media links">
+      <section class="bento" id="work">
+        <div class="container bento__head">
+          <p class="eyebrow reveal">What we build</p>
+          <h2 class="reveal">Three disciplines.<br />One studio.</h2>
+        </div>
+
+        <div class="container bento__grid">
+          <article class="bento__tile bento__tile--feature reveal">
+            <div class="bento__media">
+              <video autoplay muted loop playsinline>
+                <source src="./assets/videos/intro.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="bento__copy">
+              <h3>VR Experiences</h3>
+              <p>Immersive environments for training, product demos, and brand activations that put people inside the story.</p>
+            </div>
+          </article>
+
+          <article class="bento__tile reveal">
+            <div class="bento__copy">
+              <h3>Unity Development</h3>
+              <p>Real-time prototypes and polished interactive applications, engineered for realism and scale.</p>
+            </div>
+          </article>
+
+          <article class="bento__tile reveal">
+            <div class="bento__copy">
+              <h3>Web Craft</h3>
+              <p>Modern, high-converting websites that turn complex products into clear digital journeys.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="process" id="approach">
+        <div class="container process__head">
+          <p class="eyebrow reveal">How we work</p>
+          <h2 class="reveal">A quiet, deliberate process.</h2>
+        </div>
+
+        <ol class="process__list container">
+          <li class="process__item reveal">
+            <span class="process__index">01</span>
+            <div class="process__body">
+              <h3>Discover</h3>
+              <p>We study the audience, the constraints, and the goal before a single pixel or polygon is placed.</p>
+            </div>
+          </li>
+          <li class="process__item reveal">
+            <span class="process__index">02</span>
+            <div class="process__body">
+              <h3>Design</h3>
+              <p>Concepts are shaped in fast, honest iterations — refined until nothing more can be removed.</p>
+            </div>
+          </li>
+          <li class="process__item reveal">
+            <span class="process__index">03</span>
+            <div class="process__body">
+              <h3>Build</h3>
+              <p>Engineering happens in the open, with working builds early and often, in VR, Unity, or the browser.</p>
+            </div>
+          </li>
+          <li class="process__item reveal">
+            <span class="process__index">04</span>
+            <div class="process__body">
+              <h3>Launch</h3>
+              <p>We ship, measure, and stay close after release — a launch is a beginning, not a finish line.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="team" id="team">
+        <div class="container team__head">
+          <p class="eyebrow reveal">The people</p>
+          <h2 class="reveal">A small team, deliberately.</h2>
+        </div>
+
+        <ul class="team__list container">
+          <li class="team__row reveal">
+            <span class="team__name">John Chen</span>
+            <span class="team__role">Creative Director</span>
+            <span class="team__arrow" aria-hidden="true">→</span>
+          </li>
+          <li class="team__row reveal">
+            <span class="team__name">Jonas Rivera</span>
+            <span class="team__role">Unity Engineer</span>
+            <span class="team__arrow" aria-hidden="true">→</span>
+          </li>
+          <li class="team__row reveal">
+            <span class="team__name">Alice Brooks</span>
+            <span class="team__role">Experience Designer</span>
+            <span class="team__arrow" aria-hidden="true">→</span>
+          </li>
+          <li class="team__row reveal">
+            <span class="team__name">Daniel Sol</span>
+            <span class="team__role">Frontend Developer</span>
+            <span class="team__arrow" aria-hidden="true">→</span>
+          </li>
+          <li class="team__row reveal">
+            <span class="team__name">Priya Nair</span>
+            <span class="team__role">Product Strategist</span>
+            <span class="team__arrow" aria-hidden="true">→</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="cta" id="contact">
+        <div class="container cta__inner">
+          <p class="eyebrow reveal on-dark">Start a project</p>
+          <h2 class="reveal on-dark">Let&rsquo;s build what&rsquo;s next.</h2>
+          <p class="lead reveal on-dark">Tell us about the VR, Unity, or web experience you want to create.</p>
+          <button class="btn btn--light reveal" type="button" data-open-modal>Start a project</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="contactModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+        <div class="modal__header">
+          <h3 id="contactModalTitle">Tell us about your project</h3>
+          <button class="modal__close" type="button" aria-label="Close contact form" data-close-modal>&times;</button>
+        </div>
+        <form class="modal__form" id="contactForm">
+          <label>
+            <span>Phone number</span>
+            <input type="tel" name="phone" placeholder="+1 555 123 4567" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span>Project details</span>
+            <textarea name="project" rows="4" placeholder="Describe the VR, Unity, or web experience you want to build." required></textarea>
+          </label>
+          <button class="btn btn--primary modal__submit" type="submit">Send inquiry</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <a class="footer__brand" href="#top">
+          <img src="./assets/imgs/logo.png" alt="Nexus" />
+        </a>
+
+        <nav class="footer__links" aria-label="Footer">
+          <a href="#work">Work</a>
+          <a href="#approach">Approach</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer__social" aria-label="Social media links">
           <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
           <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://x.com" target="_blank" rel="noreferrer">X</a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-      </footer>
-
-    </div>
+      </div>
+      <div class="container footer__base">
+        <span>&copy; <span id="year"></span> Nexus Studio. All rights reserved.</span>
+      </div>
+    </footer>
   </body>
 </html>

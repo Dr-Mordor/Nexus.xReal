@@ -1,0 +1,111 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $gutter;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity $duration-base $ease-fluid, visibility 0s linear $duration-base;
+}
+
+.modal.is-open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity $duration-base $ease-fluid;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 12, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.modal__card {
+  position: relative;
+  width: min(100%, 480px);
+  padding: $space-4;
+  background: $color-white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  transform: translateY(18px) scale(0.98);
+  opacity: 0;
+  transition: transform $duration-base $ease-spring, opacity $duration-base $ease-fluid;
+}
+
+.modal.is-open .modal__card {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-2;
+  margin-bottom: $space-3;
+
+  h3 {
+    font-size: 1.15rem;
+  }
+}
+
+.modal__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: $color-graphite;
+  transition: background-color $duration-fast $ease-fluid;
+
+  &:hover {
+    background: $color-surface;
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: $type-small;
+    color: $color-graphite;
+  }
+
+  input,
+  textarea {
+    padding: 0.8em 1em;
+    border: 1px solid $color-hairline-strong;
+    border-radius: $radius-sm;
+    background: $color-canvas;
+    transition: border-color $duration-fast $ease-fluid;
+
+    &:focus {
+      border-color: $color-premium-black;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.modal__submit {
+  margin-top: $space-1;
+  width: 100%;
+}

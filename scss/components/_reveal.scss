@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.reveal {
+  @include reveal-base;
+}
+
+.reveal.is-visible {
+  @include reveal-visible;
+}
+
+.bento__grid .bento__tile {
+  @include stagger(3, 90ms);
+}
+
+.process__list .process__item {
+  @include stagger(4, 80ms);
+}
+
+.team__list .team__row {
+  @include stagger(6, 60ms);
+}
