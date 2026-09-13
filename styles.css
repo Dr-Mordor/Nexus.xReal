@@ -473,15 +473,6 @@ p {
   background: rgba(10, 10, 12, 0.04);
 }
 
-.btn--ghost-dark {
-  background: transparent;
-  color: var(--color-dark-text);
-  border: 1px solid var(--color-dark-hairline);
-}
-.btn--ghost-dark:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
 /* =============================================================
    Hero
    ============================================================= */
